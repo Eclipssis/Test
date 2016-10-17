@@ -1,0 +1,30 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      //= template/header.jade
+
+      section#middle
+        .container
+          ul.breadcrumb
+            li
+              a(href='#') Main
+            li.active Inner page
+
+          a.btn(href='#') Кнопка
+
+          ul
+            li
+              a(href="")
+            li
+              a(href="")
+            li
+              a(href="")
+
+      .page-buffer
+
+    //= template/footer.jade
