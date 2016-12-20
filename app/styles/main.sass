@@ -8,3 +8,55 @@
 @import partials/forms
 @import partials/layout
 @import partials/plugins
+
+.rating
+  display: inline-block
+  list-style-type: none
+  margin-bottom: 0 
+  background: url('../images/rating.png') 0 0 repeat
+  position: relative
+  height: $star-height
+  width: $star-width * 5
+  li 
+    float: left
+    height: $star-height
+    span[class*="star"] 
+      position: absolute
+      z-index: 5
+      display: block
+      width: $star-width
+      height: $star-height
+      cursor: pointer
+      &:hover 
+        z-index: 2
+        left: 0
+        background: url('../images/rating.png') left bottom repeat 
+      
+    span.star1  
+      left: 0
+      &:hover 
+        width: $star-width
+
+    span.star2  
+      left: $star-width
+      &:hover 
+        width: $star-width * 2
+      
+    span.star3  
+      left: $star-width * 2
+      &:hover 
+        width: $star-width * 3
+      
+    span.star4  
+      left: $star-width * 3
+      &:hover 
+        width: $star-width * 4
+      
+    span.star5  
+      left: $star-width * 4
+      &:hover
+        width: $star-width * 5
+      
+  li.active 
+    background: url('../images/rating.png') left bottom repeat
+    z-index: 1
