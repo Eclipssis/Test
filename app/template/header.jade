@@ -1,21 +1,32 @@
-header#header.header
-  .container
-    .group
-      .head-menu
-        span.menu-icon
-          span
-          span
-          span
-        ul.menu
-          li
-            a(href='#') Item 1
-          li
-            a(href='#') Item 2
-          li
-            a(href='#') Item 3
-          li
-            a(href='#') Item 4
-          li
-            a(href='#') Item 5
+header.header
+  .header-inner
+    .container
+      a.logo
+        img(src="images/logo.png", alt="logo")
+
+      .contact-phones
+        .contact-phones__item +7(499) 777-77-77
+        .contact-phones__item +7(499) 777-77-77
+        div
+          a(href="#!").contact-link.js-open-modal Обратная связь
+          
+  .menu-wrap
+    .container
+      ul.menu
+        li.menu__item
+          a(href="#!").menu__link Главная
+
+        li.menu__item
+          a(href="#!").menu__link Каталог 
+
+        li.menu__item
+          a(href="#!").menu__link Доставка и оплата
+
+        li.menu__item
+          a(href="#!").menu__link Прайс-лист
+
+        li.menu__item
+          a(href="#!").menu__link Контакты        
+
   // container end
 // header

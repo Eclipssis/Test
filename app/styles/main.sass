@@ -9,54 +9,148 @@
 @import partials/layout
 @import partials/plugins
 
-.rating
-  display: inline-block
-  list-style-type: none
-  margin-bottom: 0 
-  background: url('../images/rating.png') 0 0 repeat
-  position: relative
-  height: $star-height
-  width: $star-width * 5
-  li 
-    float: left
-    height: $star-height
-    span[class*="star"] 
-      position: absolute
-      z-index: 5
-      display: block
-      width: $star-width
-      height: $star-height
-      cursor: pointer
-      &:hover 
-        z-index: 2
-        left: 0
-        background: url('../images/rating.png') left bottom repeat 
-      
-    span.star1  
-      left: 0
-      &:hover 
-        width: $star-width
 
-    span.star2  
-      left: $star-width
-      &:hover 
-        width: $star-width * 2
+.main-slider
+  max-height: 400px
+  height: 400px
+  overflow: hidden
+  margin-bottom: 10px
+  
+  .owl-nav
+    position: absolute
+    max-width: 1000px
+    width: 100%
+    padding: 0 10px
+    top: 50%
+    left: 50%
+    margin-left: -500px
+    width: 100%
+    margin-top: -30.5px
+    > div
+      position: absolute
+      width: 34px
+      height: 61px 
+      text-indent: -9999px
+
+    .owl-prev
+      left: 0
+      background: url('../images/slider-arrow-prev.jpg') 0 0 no-repeat
       
-    span.star3  
-      left: $star-width * 2
-      &:hover 
-        width: $star-width * 3
+
+    .owl-next
+      right: 0
+      background: url('../images/slider-arrow-next.jpg') 0 0 no-repeat
+    
+.product-list
+  overflow: hidden
+  margin-right: -7.5px
+  margin-left: -7.5px
+  &__item
+    float: left
+    width: 33.33333%
+    padding: 0 7.5px
+
+.product
+  padding: 20px    
+  background-color: #dcdcdc
+  margin-bottom: 15px
+  &__image
+    margin-bottom: 20px
+  &__title
+    font-size: 18px
+    min-height: 75px
+    margin-bottom: 10px
+
+  &__price
+    color: #444444
+    font-size: 28px
+    line-height: 28px
+    font-weight: 700
+    float: left
+    
+
+  &__footer
+    overflow: hidden
       
-    span.star4  
-      left: $star-width * 3
-      &:hover 
-        width: $star-width * 4
-      
-    span.star5  
-      left: $star-width * 4
-      &:hover
-        width: $star-width * 5
-      
-  li.active 
-    background: url('../images/rating.png') left bottom repeat
-    z-index: 1
+
+.cart-btn
+  float: right
+  width: 28px
+  height: 21px
+  background: url('../images/cart-icon.png') 0 0 no-repeat        
+
+
+.aside-menu
+  margin-bottom: 100px
+  &__item  
+    margin-bottom: 8px
+  &__link  
+    font-size: 18px
+
+.aside-submenu
+  list-style-type: disc
+  list-style-position: inside
+  padding-left: 10px
+  &__item  
+  &__link     
+    &:hover
+      color: #010101 
+
+.price-list
+  text-align: center
+
+.price-text
+  color: #444444
+  margin-top: 5px
+  font-weight: 700
+  font-size: 30px
+
+.pagination
+  text-align: center
+  
+  &__item
+    display: inline-block
+    margin: 0 5px
+    &.active
+      color: #444444
+      font-size: 18px
+
+.divider
+  width: 100%
+  height: 1px
+  background-color: #777777
+  margin-bottom: 25px
+
+.box-modal
+  position: relative
+  width: 460px
+  padding: 35px 65px
+  background: #fff
+  color: #535353
+  border-radius: 0px
+
+.box-modal_close
+  position: absolute
+  right: -27px
+  top: -27px
+  cursor: pointer
+  width: 27px
+  height: 27px
+  background: url('../images/modal-close.jpg') 0 0 no-repeat
+  &:hover
+    color: #666  
+
+.modal-title
+  font-size: 24px
+  font-weight: 700
+  margin-bottom: 30px
+  text-transform: uppercase  
+  text-align: center
+
+.modal-form
+  text-align: center
+  
+
+.form-group
+  margin-bottom: 15px
+    

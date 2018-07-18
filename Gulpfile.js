@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     spritesmith = require('gulp.spritesmith'),
     merge = require('merge-stream'),
+    sourcemaps = require('gulp-sourcemaps'),
     reload = browserSync.reload;
 
 var path = {
@@ -78,24 +79,26 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['app/styles/'],
             errLogToConsole: true
         }))
         .pipe(prefixer())
         // .pipe(cssmin())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img) 
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngquant()],
+        //     interlaced: true
+        // }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
@@ -111,7 +114,7 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: '_sprite.sass',
     imgPath: '../images/sprite.png',
-    padding: 10
+    padding: 15
   }));
 
   var imgStream = spriteData.img

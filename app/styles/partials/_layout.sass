@@ -17,107 +17,163 @@ html, body
   visibility: hidden
 
 #wrapper
-  position: relative
-  min-height: 100%
-  min-width: 320px
+  min-width: 1000px
+  display: flex
+  flex-direction: column
+  height: 100%
+
+
+.wrapper-inner 
+  flex: 1 0 auto
+
+.footer 
+  flex: 0 0 auto
 
 .container
-  padding: 0 15px
+  padding: 0 10px
+  width: 1000px
+  margin: 0 auto
+
+.row
+  margin-right: -15px
+  margin-left: -15px
+  overflow: hidden
+  
+
+div[class^='col']
+  float: left
+  padding: 0 15px 
+
+.col-6
+  width: 50%
+
+.content-wrap
+  overflow: hidden
+  
+.aside  
+  float: left
+  width: 200px
+  padding-right: 15px
+
+.content  
+  float: right
+  width: 780px
+  padding-bottom: 100px
 
 
-/*----------- Navigation *
- ------------------------------------------------------------*/
 
 .breadcrumb
   > li
     list-style-type: none
     display: inline-block
     vertical-align: middle
+    color: #767676
     &:before
       content: '/ '
+      margin: 0 4px
+
     &:first-child
       &:before
         display: none
 
+    > a 
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+                        
 
 /*----------- header *
  ------------------------------------------------------------*/
 .header
   position: relative
-  padding: 15px 0
+
+.header-inner
+  padding: 52px 0  
+  overflow: hidden
+  background-color: #dcdcdc
+
 
 .logo
-  float: left
   margin: 0 20px 0 0
 
 
+.contact-phones
+  float: right
+  
+  &__item
+    font: 40px/1.15 'Open Sans Condensed', sans-serif 
+    color: #767676
+
+.contact-link
+  display: inline-block
+  margin-top: 10px
+  font-size: 24px
+  line-height: 22px
+  font-weight: 700
+  color: #767676
+  border-bottom: 2px dashed #767676
+  &:hover, &:focus
+    border: none
+    text-decoration: none
+    
+.menu-wrap
+  background-color: #777777
+  padding: 26px 0
+
+.menu
+  text-align: center
+  margin-bottom: 0
+  &__item + &__item
+    border-left: 2px solid #ffffff
+
+  &__item
+    display: inline-block
+    padding: 0 12px
+    
+  &__link
+    color: #ffffff
+    font-size: 30px
+    text-decoration: none
+    &:hover, &:focus
+      color: #ffffff
+      text-decoration: underline
+  
+  &--footer
+    text-align: left
+    
+    .menu__item
+      display: block
+      margin-bottom: 3px
+    
+    .menu__item + .menu__item
+      border: none
+          
+    .menu__link
+      font-size: 14px
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+        
 /*----------- Footer *
  ------------------------------------------------------------*/
 .footer
   width: 100%
   position: relative
+  padding: 45px 0
+  background-color: #767676
+  color: #ffffff
+  a
+    color: #ffffff
 
 
-
-/*----------- media style -----------*/
-
-// @media only screen and (max-width: 1200px)
+.copyright
+  margin-bottom: 0
 
 
-@media only screen and (max-width: 992px)
-
-  h1, .title-h1
-    font-size: $title-h1-size / 1.1
-
-  h2, .title-h2
-    font-size: $title-h2-size / 1.1
-
-
-@media only screen and (max-width: 768px)
-
-  body, html
-    height: auto
-
-  #wrapper
-    margin-bottom: 0px
-
-  .page-buffer
-    display: none
-
-  .footer
-    height: auto
-
-  h1, .title-h1
-    font-size: $title-h1-size / 1.3
-
-  h2, .title-h2
-    font-size: $title-h2-size / 1.2
-
-
-// @media only screen and (max-width: 600px)
-
-
-@media only screen and (max-width: 480px)
-
-  h1, .title-h1
-   font-size: $title-h1-size / 1.5
-
-  h2, .title-h2
-   font-size: $title-h2-size / 1.3
-
-
-/*----------- Main blocks *
- ------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
+.footer-section
+  display: inline-block
+  vertical-align: top
+  min-width: 350px
 
 
 

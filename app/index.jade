@@ -4,31 +4,164 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
+
+    div(style='display: none;')
+      #exampleModal.box-modal
+        .box-modal_close.arcticmodal-close
+        
+        .modal-title Обратная связь
+        
+        form.modal-form
+          .form-group
+            label(for='name') Ваше имя *
+            input#name(type='text')
+          
+          .form-group
+            label(for='phone') Телефон *
+            input#phone(type='text')
+            
+
+          .form-group
+            label(for='email') Email *
+            input#email.error(type='email' placeholder='Поле обязательно для заполнения')
+            
+            
+          .form-group
+            label(for='message') Сообщение
+            textarea#message
+                  
+          button(type='submit').btn ОТПРАВИТЬ
+
+
     #wrapper
+      .wrapper-inner
+        //= template/header.jade
 
-      //= template/header.jade
+        section.middle
+          .owl-carousel.main-slider
+            .item
+              img(src="images/slide-1.jpg", alt="slide-1")
+            .item
+              img(src="images/slide-2.jpg", alt="slide-2")    
+          
+          .container
 
-      section#middle
-        .container
-          ul.breadcrumb
-            li
-              a(href='#') Main
-            li.active Inner page
+            ul.breadcrumb
+              li
+                a(href='#') Главная
+              li
+                a(href='#') Каталог
+                  
+              li.active Бытовая техника
 
-          a.btn(href='#') Кнопка
+            .content-wrap
+              aside.aside
+                ul.aside-menu
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Автомобили
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Бытовая техника
+                    
+                    ul.aside-submenu
+                      li.aside-submenu__item
+                        a(href="#!").aside-submenu__link Микроволновки
+                      li.aside-submenu__item
+                        a(href="#!").aside-submenu__link Холодильники
+                      li.aside-submenu__item
+                        a(href="#!").aside-submenu__link Посудомоечные машины
+                      li.aside-submenu__item
+                        a(href="#!").aside-submenu__link Чайники
 
-          ul.rating
-            li.active(style="width: 20%")
-              span.star1
-            li
-              span.star2
-            li
-              span.star3
-            li
-              span.star4
-            li
-              span.star5
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Мобильная техника
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Компьютеры
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Одежда
+                  li.aside-menu__item
+                    a(href="#!").aside-menu__link Недвижимость
+                
+                .price-list
+                  img(src="images/price-image.png", alt="price-image")
+                  .price-text Прайс-лист
 
-      .page-buffer
 
-    //= template/footer.jade
+              .content  
+                ul.product-list
+                  li.product-list__item
+                    .product
+                      .product__image
+                        img(src="images/product-image.jpg", alt="product-image")
+                      .product__title 
+                        a(href="#!") Самый клевый чайник, который надо купить!
+                      .product__footer
+                        .product__price 1 900 р.
+                        a(href="#!").cart-btn 
+
+                  li.product-list__item
+                    .product
+                      .product__image
+                        img(src="images/product-image.jpg", alt="product-image")
+                      .product__title 
+                        a(href="#!") Самый клевый чайник, который надо купить!
+                      .product__footer
+                        .product__price 1 900 р.
+                        a(href="#!").cart-btn 
+                        
+                  li.product-list__item
+                    .product
+                      .product__image
+                        img(src="images/product-image.jpg", alt="product-image")
+                      .product__title 
+                        a(href="#!") Самый клевый чайник, который надо купить!
+                      .product__footer
+                        .product__price 1 900 р.
+                        a(href="#!").cart-btn     
+                        
+                  li.product-list__item
+                    .product
+                      .product__image
+                        img(src="images/product-image.jpg", alt="product-image")
+                      .product__title 
+                        a(href="#!") Самый клевый чайник, который надо купить!
+                      .product__footer
+                        .product__price 1 900 р.
+                        a(href="#!").cart-btn 
+
+                  li.product-list__item
+                    .product
+                      .product__image
+                        img(src="images/product-image.jpg", alt="product-image")
+                      .product__title 
+                        a(href="#!") Самый клевый чайник, который надо купить!
+                      .product__footer
+                        .product__price 1 900 р.
+                        a(href="#!").cart-btn 
+
+                ul.pagination
+                  li.pagination__item
+                    a(href="#!").pagination__link 1
+                  li.pagination__item
+                    a(href="#!").pagination__link 2
+                  li.pagination__item.active 3
+                  li.pagination__item
+                    a(href="#!").pagination__link 4
+                  li.pagination__item
+                    a(href="#!").pagination__link 5
+                  li.pagination__item
+                    a(href="#!").pagination__link 6
+                  li.pagination__item
+                    a(href="#!").pagination__link 7
+                
+                .divider
+
+                .row
+                  .col-6
+                    p Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души.  
+                  .col-6  
+                    p Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе. 
+
+
+      //= template/footer.jade
+
+    //= template/scripts.jade

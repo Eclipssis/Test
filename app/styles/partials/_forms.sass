@@ -5,18 +5,46 @@
 /*----------- Form sryle *
  ------------------------------------------------------------*/
 
+.placeholder 
+  color: #222222 
+
+*:focus::-moz-placeholder 
+  color: transparent !important 
+
+*[autofocus]::-moz-placeholder:focus 
+  color: #000!important 
+
+*:focus:-moz-placeholder 
+  color: transparent !important 
+
+*[autofocus]:-moz-placeholder:focus 
+  color: #000!important 
+
+*:focus::-webkit-input-placeholder 
+  color: transparent !important 
+
+*[autofocus]::-webkit-input-placeholder 
+  color: #000!important 
+
+label 
+  text-align: center
+  color: #535353
+  margin-bottom: 3px
+  display: block
+  
+
 input, textarea
   +placeholder-color(#000)
   +border-radius(0px)
   padding: 0 20px
   width: 100%
-  height: 50px
+  height: 42px
   position: relative
   outline: none
   font: 14px $site-font-family
   color: #000
   background-color: #fff
-  border: 1px solid #e0e0e0
+  border: 1px solid #c3c3c3
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
@@ -27,3 +55,7 @@ textarea
   resize: none
 
 
+.error
+  border: 1px solid #ff8383
+  box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75)
+  +placeholder-color(#dc7f7f)

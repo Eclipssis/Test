@@ -1,18 +1,11 @@
-@import mixins
-@import const
-@import sprite
-
-/*----------- button style *
- ------------------------------------------------------------*/
-
 .btn
-  min-width: 250px
+  min-width: 100px
   position: relative
   display: inline-block
   vertical-align: middle
-  padding: 10px 20px
+  padding: 12px 17px
   margin: 0
-  font: 20px/20px $btn-font-family
+  font: 700 18px/18px $btn-font-family
   text-align: center
   text-decoration: none
   cursor: pointer
@@ -20,7 +13,7 @@
   border: none
   background-color: $btn-bg-color
   color: $btn-color
-  border-radius: 10px
+  border-radius: 0
   transition: all 0.2s ease
   &:hover
     background-color: $btn-h-bg-color
@@ -36,16 +29,3 @@
 
 .btn-max
   width: 100%
-
-
-
-/*----------- media style -----------*/
-
-
-// @media only screen and (max-width: 768px)
-
-@media only screen and (max-width: 480px)
-
-  .btn 
-    min-width: 100px
-    padding: 5px 10px
